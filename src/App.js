@@ -1,13 +1,28 @@
 import React from 'react';
-import './App.css';
+import { ThemeProvider } from 'styled-components';
+import { useDarkMode } from './useDarkMode';
+import { lightTheme, darkTheme } from './theme';
+import { GlobalStyles } from './global';
+import Toggle from './Toggle';
 
 function App() {
+  const [theme, toggleTheme, componentMounted] = useDarkMode();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
+  if (!componentMounted) {
+    return <div />
+  }
+
   return (
-    <div>
-      <h1>
-        Howdy
-      </h1>
-    </div>
+    <ThemeProvider theme={themeMode}>
+      <>
+        <GlobalStyles />
+        <Toggle theme={theme} toggleTheme={toggleTheme} />
+        <h1>It's a {theme === 'light' ? 'light theme' : 'dark theme'}!</h1>
+        <footer>
+        </footer>
+      </>
+    </ThemeProvider>
   );
 }
 
