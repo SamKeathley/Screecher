@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./styles.css";
+import "../styles.css";
 
 function DarkMode() {
     const [darkMode, setDarkMode] = useState(getInitialMode);
@@ -31,7 +31,7 @@ function DarkMode() {
             <nav>
                 <div className="toggle-container">
                     <span role="img" aria-label="Sun" style={{ color: darkMode ? "grey" : "yellow" }}>
-                        ☀️
+                        ☼
                     </span>
                     <span className="toggle">
                         <input
@@ -44,13 +44,12 @@ function DarkMode() {
                         <label htmlFor="checkbox" />
                     </span>
                     <span role="img" aria-label="Moon" style={{ color: darkMode ? "slateblue" : "grey" }}>
-                        🌙
+                        ☽
                     </span>
                 </div>
             </nav>
             <main>
                 <h1>{darkMode ? "Dark Mode" : "Light Mode"}</h1>
-                <h2>Toggle the switch to see some magic happen!</h2>
             </main>
         </div>
     );
