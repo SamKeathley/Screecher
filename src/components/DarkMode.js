@@ -49,7 +49,7 @@ function DarkMode() {
                 </div>
             </nav>
             <main>
-                <h1>{darkMode ? "Dark Mode" : "Light Mode"}</h1>
+                <h1>{darkMode ? "SCREECHER DARK" : "SCREECHER LIGHT"}</h1>
             </main>
         </div>
     );
