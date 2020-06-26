@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../styles.css";
 
 function DarkMode() {
     const [darkMode, setDarkMode] = useState(getInitialMode);
@@ -43,7 +42,7 @@ function DarkMode() {
                         />
                         <label htmlFor="checkbox" />
                     </span>
-                    <span role="img" aria-label="Moon" style={{ color: darkMode ? "slateblue" : "grey" }}>
+                    <span role="img" aria-label="Moon" style={{ color: darkMode ? "slateblue" : "white" }}>
                         ☽
                     </span>
                 </div>
